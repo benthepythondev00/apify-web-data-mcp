@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benthepythondev00/local-business-leads",
+  "title": "Local Business Leads",
+  "description": "Google Maps places with emails, phones and the tech stack of their websites. Runs on Apify.",
+  "repository": {
+    "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://apify.com/benthepythondev",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=benthepythondev/google-maps-business-scraper,benthepythondev/google-maps-email-scraper,benthepythondev/website-contact-extractor,benthepythondev/tech-stack-detector",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Apify API token, for example 'Bearer <apify-api-token>'",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
