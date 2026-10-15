@@ -77,6 +77,8 @@ https://mcp.apify.com/?tools=benthepythondev/zillow-scraper,benthepythondev/zill
 - [Zumper Rental Scraper & Price Change Monitor](https://apify.com/benthepythondev/zumper-rental-scraper)
 - [Craigslist Real Estate Scraper - FSBO Listings & Rentals](https://apify.com/benthepythondev/craigslist-real-estate-scraper)
 
+The same listings without Apify or MCP: [Listingrail](https://listingrail.com/) is a REST API over 17 portals (Zillow, Redfin, Rightmove, Idealista, ImmoScout24, Bayut and more) with one key and one listing format.
+
 ### Jobs Data
 
 Remote job boards, LinkedIn jobs, company ATS pages and Upwork jobs as tools.
