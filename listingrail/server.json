@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benthepythondev00/listingrail",
+  "title": "Listingrail property listings",
+  "description": "Live sale and rental listings from Zillow, Rightmove, Idealista and 15 more portals in one schema.",
+  "repository": {
+    "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://listingrail.com/docs/",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://listingrail.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Listingrail API key from https://listingrail.com/#key (100 free listings), for example 'Bearer re_...'",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

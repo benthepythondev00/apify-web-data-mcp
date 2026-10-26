@@ -2,6 +2,10 @@ name: Publish to the MCP Registry
 
 on:
   workflow_dispatch:
+    inputs:
+      entry:
+        description: Folder of one entry to publish (empty = all)
+        required: false
 
 jobs:
   publish:
@@ -17,6 +21,6 @@ jobs:
         run: ./mcp-publisher login github-oidc
       - name: Publish every entry
         run: |
-          for entry in */server.json; do
+          for entry in ${{ inputs.entry || '*' }}/server.json; do
             (cd "$(dirname "$entry")" && ../mcp-publisher publish)
           done
