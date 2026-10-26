@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benthepythondev00/ad-library-intelligence",
+  "title": "Ad Library Intelligence",
+  "description": "Competitor ads from the Meta, Google and LinkedIn ad libraries plus ads.txt sellers. No login.",
+  "repository": {
+    "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mcpize.com/mcp/ad-library-intelligence",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ad-library-intelligence.mcpize.run/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "MCPize API key from https://mcpize.com/mcp/ad-library-intelligence, for example 'Bearer <key>'",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
