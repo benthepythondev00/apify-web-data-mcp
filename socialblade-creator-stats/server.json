@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benthepythondev00/socialblade-creator-stats",
+  "title": "SocialBlade Creator Stats",
+  "description": "YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade.",
+  "repository": {
+    "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mcpize.com/mcp/socialblade-creator-stats",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://socialblade-creator-stats.mcpize.run/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "MCPize API key from https://mcpize.com/mcp/socialblade-creator-stats, for example 'Bearer <key>'",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
