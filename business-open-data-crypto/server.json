@@ -8,7 +8,16 @@
     "source": "github"
   },
   "websiteUrl": "https://mcpize.com/mcp/business-open-data-crypto",
-  "version": "1.0.0",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/benthepythondev00/apify-web-data-mcp/main/business-open-data-crypto/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",

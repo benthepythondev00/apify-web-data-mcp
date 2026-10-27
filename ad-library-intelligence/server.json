@@ -8,7 +8,16 @@
     "source": "github"
   },
   "websiteUrl": "https://mcpize.com/mcp/ad-library-intelligence",
-  "version": "1.0.0",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/benthepythondev00/apify-web-data-mcp/main/ad-library-intelligence/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",

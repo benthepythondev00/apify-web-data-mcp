@@ -7,8 +7,17 @@
     "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
     "source": "github"
   },
-  "websiteUrl": "https://apify.com/benthepythondev",
-  "version": "1.0.0",
+  "websiteUrl": "https://github.com/benthepythondev00/apify-web-data-mcp#jobs-data",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/benthepythondev00/apify-web-data-mcp/main/jobs-data/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
