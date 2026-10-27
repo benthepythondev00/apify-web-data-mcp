@@ -7,8 +7,24 @@
     "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
     "source": "github"
   },
-  "websiteUrl": "https://listingrail.com/docs/",
-  "version": "1.0.0",
+  "websiteUrl": "https://listingrail.com",
+  "icons": [
+    {
+      "src": "https://listingrail.com/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/benthepythondev00/apify-web-data-mcp/main/listingrail/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
