@@ -1,0 +1,10 @@
+.env
+.env.*
+*secret*
+*credentials*
+*.session
+*.cookie
+*.key
+venv/
+__pycache__/
+node_modules/
