@@ -106,6 +106,18 @@ YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from 
 https://socialblade-creator-stats.mcpize.run/mcp
 ```
 
+What `get_creator_stats` returns per platform (checked with one real lookup each on 2026-11-01):
+
+| Field | YouTube | TikTok | Instagram | Twitch |
+|---|---|---|---|---|
+| Subscribers or followers, grade, SocialBlade rank | yes | yes | yes | yes |
+| Views, videos or likes | views, videos | likes, videos | posts count | no |
+| Engagement rate, average likes and comments | no | no | yes | no |
+| Daily history (about 15 days) | yes | yes | null | yes |
+| 7-day gain and spike dates | yes | yes | null | yes |
+
+Instagram history, gains and spike dates come back `null` because SocialBlade only shows them to logged-in users, and this server never logs in. On every platform the 30- and 90-day gains are usually `null`, since the public page covers about 15 days.
+
 ### [Ad Library Intelligence](https://mcpize.com/mcp/ad-library-intelligence)
 
 Competitor ads from the Meta, Google and LinkedIn ad libraries plus ads.txt sellers. No login.
