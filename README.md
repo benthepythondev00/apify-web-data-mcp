@@ -118,6 +118,14 @@ What `get_creator_stats` returns per platform (checked with one real lookup each
 
 Instagram history, gains and spike dates come back `null` because SocialBlade only shows them to logged-in users, and this server never logs in. On every platform the 30- and 90-day gains are usually `null`, since the public page covers about 15 days.
 
+**How do I check a creator's follower growth before a sponsorship?** Give `get_creator_stats` up to 10 profile links (for example `https://www.youtube.com/@mkbhd`). For each creator you get the follower or subscriber count, the 7-day gain, about 15 days of daily numbers and a one-line `spike_summary`, so you can see whether growth is steady or comes in sudden jumps.
+
+**Does it detect fake followers?** No. It flags spikes: days whose gain was more than 3 times the creator's median daily gain. A spike can come from a viral video or from bought followers, so treat it as a reason to look closer, not as a verdict.
+
+**How is it different from HypeAuditor or Modash?** It costs a flat $9 a month for 1,000 calls (100 calls a month are free), with no per-profile credits, and it reads public SocialBlade data from inside your MCP client. It has no audience demographics (age, gender, location of followers) and no fake-follower score, both of which those platforms sell. Modash starts at $199 a month for 300 opened profiles; HypeAuditor quotes its paid plans through sales.
+
+**Which platforms does it cover, and how many days of history?** YouTube, TikTok, Instagram and Twitch. YouTube, TikTok and Twitch come with about 15 days of daily history, which is what SocialBlade shows a logged-out visitor. Instagram returns current numbers and engagement rate but no history.
+
 ### [Ad Library Intelligence](https://mcpize.com/mcp/ad-library-intelligence)
 
 Competitor ads from the Meta, Google and LinkedIn ad libraries plus ads.txt sellers. No login.
