@@ -96,7 +96,7 @@ Besides the scrapers, Apify's server adds four helpers to every set: read a run,
 
 ## Hosted servers
 
-Three more servers run on our side behind [MCPize](https://mcpize.com), which handles keys and billing: a free plan with 50 calls a month, then $9 for 1,000 or $29 for 5,000. Get a key on the server's page and send it as `Authorization: Bearer <key>`.
+Three more servers run on our side behind [MCPize](https://mcpize.com), which handles keys and billing: a free plan with 100 calls a month, then $9 for 1,000 or $29 for 5,000. Get a key on the server's page and send it as `Authorization: Bearer <key>`.
 
 ### [SocialBlade Creator Stats](https://mcpize.com/mcp/socialblade-creator-stats)
 
