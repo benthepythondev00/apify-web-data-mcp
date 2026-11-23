@@ -1,0 +1,24 @@
+Strict MCP tool-schema validation for socialblade-creator-stats
+Date: 2026-11-23
+Endpoint: https://socialblade-creator-stats.mcpize.run/mcp
+
+1. Keyless tools/list: HTTP 200 OK (5 tools)
+   - get_creator_stats: PASS (name matches ^[a-zA-Z0-9_-]{1,64}$, no '--', root type=object, profiles array has items={type:string})
+   - get_top_creators: PASS (name valid, root type=object, no untyped arrays)
+   - get_twitch_channels: PASS (name valid, root type=object, channels array has items={type:string})
+   - get_bluesky: PASS (name valid, root type=object, handles/search_terms arrays inside anyOf both have items={type:string})
+   - get_instagram_videos: PASS (name valid, root type=object, post_links array has items={type:string})
+   All 5 outputSchema nodes also pass recursive array items check.
+
+2. Keyless tools/call (get_creator_stats, profiles=["@mkbhd"]): HTTP 402 Payment Required
+   - x402Version: 1
+   - scheme: exact
+   - network: base
+   - asset: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 (Base USDC)
+   - maxAmountRequired: "10000" ($0.01 USDC)
+   - extra.assetTransferMethod: eip3009
+
+3. Official MCP Registry entry (io.github.benthepythondev00/socialblade-creator-stats):
+   - Bumped version 1.0.1 -> 1.0.2
+   - Authorization header updated to isRequired: false with x402 optional note
+   - Validated against https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json
