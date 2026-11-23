@@ -100,11 +100,36 @@ Three more servers run on our side behind [MCPize](https://mcpize.com), which ha
 
 ### [SocialBlade Creator Stats](https://mcpize.com/mcp/socialblade-creator-stats)
 
-YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade.
+YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade. Supports both subscription keys (`Authorization: Bearer <key>` on Free 100/mo, Pro $9/mo or Business $29/mo) and keyless pay-per-call via **x402** ($0.01 USDC on Base per tool call, no API key or account required).
 
 ```
 https://socialblade-creator-stats.mcpize.run/mcp
 ```
+
+#### Pay-per-call via x402 (HTTP 402 -> Base USDC)
+
+`Authorization` is optional when paying via x402. Discovery (`tools/list`) works keyless and returns HTTP `200`. A keyless `tools/call` returns HTTP `402 Payment Required` with an x402 v1 Base USDC (`eip3009`) payment challenge:
+
+```bash
+# 1. Request a tool call without an Authorization header -> HTTP 402
+curl -i -X POST https://socialblade-creator-stats.mcpize.run/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
+```
+
+The `402` JSON body specifies `"network": "base"`, `"asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"` (Base USDC), `"maxAmountRequired": "10000"` ($0.01 USDC), `"payTo"`, and `"extra": {"assetTransferMethod": "eip3009"}`. Sign an EIP-3009 `TransferWithAuthorization` payload with a Base mainnet wallet holding USDC (or use an x402 MCP client such as `@x402/mcp` or Coinbase Payments MCP) and retry the same request with the `X-PAYMENT` header (still no `Authorization` header):
+
+```bash
+# 2. Retry with the signed Base USDC x402 payment header -> HTTP 200
+curl -X POST https://socialblade-creator-stats.mcpize.run/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -H "X-PAYMENT: <base64-encoded-x402-eip3009-payload>" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
+```
+
+Wallet client note: make sure the signing key controls the Base mainnet address holding USDC and signs for the exact `payTo`, `asset`, and `maxAmountRequired` returned in the 402 response; omit `Authorization` so the gateway routes the call through x402 instead of Bearer key auth.
 
 What `get_creator_stats` returns per platform (checked with one real lookup each on 2026-11-01):
 
