@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benthepythondev00/reddit-posts-search-comments",
+  "title": "Reddit: Posts, Search, Comments & History",
+  "description": "Reddit posts, nested Reddit comments, date-range search and archive history back to 2008.",
+  "repository": {
+    "url": "https://github.com/benthepythondev00/apify-web-data-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mcpize.com/mcp/reddit-posts-search-comments",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://reddit-posts-search-comments.mcpize.run/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "MCPize API key from https://mcpize.com/mcp/reddit-posts-search-comments, for example 'Bearer <key>'",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

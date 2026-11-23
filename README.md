@@ -28,10 +28,10 @@ Reddit posts, comments, keyword search and historical archives as tools.
 https://mcp.apify.com/?tools=benthepythondev/reddit-scraper,benthepythondev/reddit-search-scraper,benthepythondev/reddit-comments-scraper,benthepythondev/reddit-archive-scraper
 ```
 
-- [Reddit Scraper - Posts, Comments, Users & Search](https://apify.com/benthepythondev/reddit-scraper)
+- [Reddit Scraper: Posts & Full Comment Threads, Excel Rows, MCP](https://apify.com/benthepythondev/reddit-scraper)
 - [Reddit Search Scraper - Keyword Posts, Date Range, No Login](https://apify.com/benthepythondev/reddit-search-scraper)
-- [Reddit Comments Scraper - Threads & Replies, No Login](https://apify.com/benthepythondev/reddit-comments-scraper)
-- [Reddit Archive Scraper — Historical Posts for RAG](https://apify.com/benthepythondev/reddit-archive-scraper)
+- [Reddit Comments Scraper - Threads & Replies to CSV, No Login](https://apify.com/benthepythondev/reddit-comments-scraper)
+- [Reddit Archive Scraper — Historical Posts and Comments by Date](https://apify.com/benthepythondev/reddit-archive-scraper)
 
 ### Social Media Data
 
@@ -41,13 +41,13 @@ Instagram, TikTok, YouTube and Threads profiles, posts, comments and transcripts
 https://mcp.apify.com/?tools=benthepythondev/instagram-profile-scraper,benthepythondev/instagram-posts-scraper,benthepythondev/instagram-comments-scraper,benthepythondev/tiktok-profile-videos-scraper,benthepythondev/tiktok-comments-scraper,benthepythondev/youtube-transcript-scraper,benthepythondev/youtube-comments-scraper,benthepythondev/threads-public-scraper
 ```
 
-- [Instagram Profile Scraper - Followers, Bio, Links, No Login](https://apify.com/benthepythondev/instagram-profile-scraper)
+- [Instagram Profile Scraper - Bio Links, Follower Count, No Login](https://apify.com/benthepythondev/instagram-profile-scraper)
 - [Instagram Posts Scraper - Captions, Likes, Media, No Login](https://apify.com/benthepythondev/instagram-posts-scraper)
 - [Instagram Comments Scraper - Posts & Reels, No Login](https://apify.com/benthepythondev/instagram-comments-scraper)
-- [TikTok Profile Videos Scraper - Views, Likes, No Login](https://apify.com/benthepythondev/tiktok-profile-videos-scraper)
+- [TikTok Profile & User Videos Scraper - All Videos, No Login](https://apify.com/benthepythondev/tiktok-profile-videos-scraper)
 - [TikTok Comments Scraper - Replies, Likes, No Login](https://apify.com/benthepythondev/tiktok-comments-scraper)
 - [YouTube Transcript Scraper - Text, SRT & VTT](https://apify.com/benthepythondev/youtube-transcript-scraper)
-- [YouTube Comments Scraper - Replies, Likes, No API Key](https://apify.com/benthepythondev/youtube-comments-scraper)
+- [YouTube Comments & Replies Scraper: Shorts, Live, No API Key](https://apify.com/benthepythondev/youtube-comments-scraper)
 - [Threads Scraper - Posts, Profiles, Replies, No Login](https://apify.com/benthepythondev/threads-public-scraper)
 
 ### Local Business Leads
@@ -58,7 +58,7 @@ Google Maps places with emails, phones and the tech stack of their websites.
 https://mcp.apify.com/?tools=benthepythondev/google-maps-business-scraper,benthepythondev/google-maps-email-scraper,benthepythondev/website-contact-extractor,benthepythondev/tech-stack-detector
 ```
 
-- [Google Maps Scraper - Business Contacts & Ratings](https://apify.com/benthepythondev/google-maps-business-scraper)
+- [Google Maps Scraper - Business Leads by City: Phone & Website](https://apify.com/benthepythondev/google-maps-business-scraper)
 - [Google Maps Email Extractor - Emails, Phones & Social Links](https://apify.com/benthepythondev/google-maps-email-scraper)
 - [Website Contact & Email Extractor - Emails, Phones, Socials](https://apify.com/benthepythondev/website-contact-extractor)
 - [Tech Stack Detector - Wappalyzer & BuiltWith Alternative](https://apify.com/benthepythondev/tech-stack-detector)
@@ -72,12 +72,12 @@ https://mcp.apify.com/?tools=benthepythondev/zillow-scraper,benthepythondev/zill
 ```
 
 - [Zillow Search Scraper - Homes For Sale & Sold by City or ZIP](https://apify.com/benthepythondev/zillow-scraper)
-- [Zillow Detail Scraper - Property Data by URL, ZPID or Address](https://apify.com/benthepythondev/zillow-detail-scraper)
-- [Zillow Rentals Scraper - Apartments, Units & Rent Prices](https://apify.com/benthepythondev/zillow-rentals-scraper)
+- [Zillow Detail Scraper: Property Details by URL, ZPID, Address](https://apify.com/benthepythondev/zillow-detail-scraper)
+- [Zillow Scraper: Apartments for Rent + Rent Change Monitor](https://apify.com/benthepythondev/zillow-rentals-scraper)
 - [Zumper Scraper: Apartments for Rent + Rent Change Monitor](https://apify.com/benthepythondev/zumper-rental-scraper)
 - [Craigslist Real Estate Scraper - FSBO Listings & Rentals](https://apify.com/benthepythondev/craigslist-real-estate-scraper)
 
-The same listings without Apify: [Listingrail](https://listingrail.com/) is a REST API over 18 portals (Zillow, Redfin, Rightmove, Idealista, ImmoScout24, Bayut and more) with one key and one listing format, and the same search as an MCP server at `https://listingrail.com/mcp` (send the key as `Authorization: Bearer re_...`).
+The same listings without Apify: [Listingrail](https://listingrail.com/) is a REST API over 22 portals in 13 countries (Zillow, Redfin, Rightmove, Idealista, ImmoScout24, Bayut and more) with one key and one listing format, and the same search as an MCP server at `https://listingrail.com/mcp` (send the key as `Authorization: Bearer re_...`).
 
 ### Jobs Data
 
@@ -87,10 +87,10 @@ Remote job boards, LinkedIn jobs, company ATS pages and Upwork jobs as tools.
 https://mcp.apify.com/?tools=benthepythondev/remote-jobs-aggregator,benthepythondev/linkedin-jobs-scraper,benthepythondev/ats-jobs-aggregator,benthepythondev/upwork-jobs-scraper
 ```
 
-- [Remote Jobs Scraper: RemoteOK, Remotive, Himalayas + 3 more](https://apify.com/benthepythondev/remote-jobs-aggregator)
+- [Remote Jobs Scraper: Worldwide vs US-only Filter, 6 Boards](https://apify.com/benthepythondev/remote-jobs-aggregator)
 - [LinkedIn Jobs Scraper - Full Descriptions, No Login](https://apify.com/benthepythondev/linkedin-jobs-scraper)
-- [💼 ATS Jobs Aggregator - Greenhouse, Lever, Ashby & More](https://apify.com/benthepythondev/ats-jobs-aggregator)
-- [Upwork Jobs Scraper - Jobs with Client Details, No Login](https://apify.com/benthepythondev/upwork-jobs-scraper)
+- [ATS Jobs Aggregator - Greenhouse, Lever, Ashby & More](https://apify.com/benthepythondev/ats-jobs-aggregator)
+- [Upwork Jobs Scraper - Job Alerts & Client Details, No Login](https://apify.com/benthepythondev/upwork-jobs-scraper)
 
 Besides the scrapers, Apify's server adds four helpers to every set: read a run, read its dataset, read a stored record, stop a run.
 
@@ -100,60 +100,15 @@ Three more servers run on our side behind [MCPize](https://mcpize.com), which ha
 
 ### [SocialBlade Creator Stats](https://mcpize.com/mcp/socialblade-creator-stats)
 
-YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade. Supports both subscription keys (`Authorization: Bearer <key>` on Free 100/mo, Pro $9/mo or Business $29/mo) and keyless pay-per-call via **x402** ($0.01 USDC on Base per tool call, no API key or account required).
+YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade.
 
 ```
 https://socialblade-creator-stats.mcpize.run/mcp
 ```
 
-#### Pay-per-call via x402 (HTTP 402 -> Base USDC)
-
-`Authorization` is optional when paying via x402. Discovery (`tools/list`) works keyless and returns HTTP `200`. A keyless `tools/call` returns HTTP `402 Payment Required` with an x402 v1 Base USDC (`eip3009`) payment challenge:
-
-```bash
-# 1. Request a tool call without an Authorization header -> HTTP 402
-curl -i -X POST https://socialblade-creator-stats.mcpize.run/mcp \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/json, text/event-stream" \
-  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
-```
-
-The `402` JSON body specifies `"network": "base"`, `"asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"` (Base USDC), `"maxAmountRequired": "10000"` ($0.01 USDC), `"payTo"`, and `"extra": {"assetTransferMethod": "eip3009"}`. Sign an EIP-3009 `TransferWithAuthorization` payload with a Base mainnet wallet holding USDC (or use an x402 MCP client such as `@x402/mcp` or Coinbase Payments MCP) and retry the same request with the `X-PAYMENT` header (still no `Authorization` header):
-
-```bash
-# 2. Retry with the signed Base USDC x402 payment header -> HTTP 200
-curl -X POST https://socialblade-creator-stats.mcpize.run/mcp \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/json, text/event-stream" \
-  -H "X-PAYMENT: <base64-encoded-x402-eip3009-payload>" \
-  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
-```
-
-Wallet client note: make sure the signing key controls the Base mainnet address holding USDC and signs for the exact `payTo`, `asset`, and `maxAmountRequired` returned in the 402 response; omit `Authorization` so the gateway routes the call through x402 instead of Bearer key auth.
-
-What `get_creator_stats` returns per platform (checked with one real lookup each on 2026-11-01):
-
-| Field | YouTube | TikTok | Instagram | Twitch |
-|---|---|---|---|---|
-| Subscribers or followers, grade, SocialBlade rank | yes | yes | yes | yes |
-| Views, videos or likes | views, videos | likes, videos | posts count | no |
-| Engagement rate, average likes and comments | no | no | yes | no |
-| Daily history (about 15 days) | yes | yes | null | yes |
-| 7-day gain and spike dates | yes | yes | null | yes |
-
-Instagram history, gains and spike dates come back `null` because SocialBlade only shows them to logged-in users, and this server never logs in. On every platform the 30- and 90-day gains are usually `null`, since the public page covers about 15 days.
-
-**How do I check a creator's follower growth before a sponsorship?** Give `get_creator_stats` up to 10 profile links (for example `https://www.youtube.com/@mkbhd`). For each creator you get the follower or subscriber count, the 7-day gain, about 15 days of daily numbers and a one-line `spike_summary`, so you can see whether growth is steady or comes in sudden jumps.
-
-**Does it detect fake followers?** No. It flags spikes: days whose gain was more than 3 times the creator's median daily gain. A spike can come from a viral video or from bought followers, so treat it as a reason to look closer, not as a verdict.
-
-**How is it different from HypeAuditor or Modash?** It costs a flat $9 a month for 1,000 calls (100 calls a month are free), with no per-profile credits, and it reads public SocialBlade data from inside your MCP client. It has no audience demographics (age, gender, location of followers) and no fake-follower score, both of which those platforms sell. Modash starts at $199 a month for 300 opened profiles; HypeAuditor quotes its paid plans through sales.
-
-**Which platforms does it cover, and how many days of history?** YouTube, TikTok, Instagram and Twitch. YouTube, TikTok and Twitch come with about 15 days of daily history, which is what SocialBlade shows a logged-out visitor. Instagram returns current numbers and engagement rate but no history.
-
 ### [Ad Library Intelligence](https://mcpize.com/mcp/ad-library-intelligence)
 
-Competitor ads from the Meta, Google and LinkedIn ad libraries plus ads.txt sellers. No login.
+Competitor ads from Meta Ads, Google Ads Transparency and LinkedIn Ad Library plus ads.txt.
 
 ```
 https://ad-library-intelligence.mcpize.run/mcp
@@ -165,6 +120,14 @@ Government open-data search, crypto prices, Fear & Greed, Bitcoin stats, FX rate
 
 ```
 https://business-open-data-crypto.mcpize.run/mcp
+```
+
+### [Reddit: Posts, Search, Comments & History](https://mcpize.com/mcp/reddit-posts-search-comments)
+
+Reddit posts, nested Reddit comments, date-range search and archive history back to 2008.
+
+```
+https://reddit-posts-search-comments.mcpize.run/mcp
 ```
 
 ## Questions
