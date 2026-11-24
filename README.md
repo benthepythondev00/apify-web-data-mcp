@@ -47,7 +47,7 @@ https://mcp.apify.com/?tools=benthepythondev/instagram-profile-scraper,benthepyt
 - [TikTok Profile & User Videos Scraper - All Videos, No Login](https://apify.com/benthepythondev/tiktok-profile-videos-scraper)
 - [TikTok Comments Scraper - Replies, Likes, No Login](https://apify.com/benthepythondev/tiktok-comments-scraper)
 - [YouTube Transcript Scraper - Text, SRT & VTT](https://apify.com/benthepythondev/youtube-transcript-scraper)
-- [YouTube Comments & Replies Scraper: Shorts, Live, No API Key](https://apify.com/benthepythondev/youtube-comments-scraper)
+- [YouTube Comments Scraper — Replies, Shorts & Live](https://apify.com/benthepythondev/youtube-comments-scraper)
 - [Threads Scraper - Posts, Profiles, Replies, No Login](https://apify.com/benthepythondev/threads-public-scraper)
 
 ### Local Business Leads
@@ -87,7 +87,7 @@ Remote job boards, LinkedIn jobs, company ATS pages and Upwork jobs as tools.
 https://mcp.apify.com/?tools=benthepythondev/remote-jobs-aggregator,benthepythondev/linkedin-jobs-scraper,benthepythondev/ats-jobs-aggregator,benthepythondev/upwork-jobs-scraper
 ```
 
-- [Remote Jobs Scraper: Worldwide vs US-only Filter, 6 Boards](https://apify.com/benthepythondev/remote-jobs-aggregator)
+- [Remote Jobs Scraper: Worldwide vs US-only Filter, 7 Boards](https://apify.com/benthepythondev/remote-jobs-aggregator)
 - [LinkedIn Jobs Scraper - Full Descriptions, No Login](https://apify.com/benthepythondev/linkedin-jobs-scraper)
 - [ATS Jobs Aggregator - Greenhouse, Lever, Ashby & More](https://apify.com/benthepythondev/ats-jobs-aggregator)
 - [Upwork Jobs Scraper - Job Alerts & Client Details, No Login](https://apify.com/benthepythondev/upwork-jobs-scraper)
@@ -96,7 +96,7 @@ Besides the scrapers, Apify's server adds four helpers to every set: read a run,
 
 ## Hosted servers
 
-Three more servers run on our side behind [MCPize](https://mcpize.com), which handles keys and billing: a free plan with 100 calls a month, then $9 for 1,000 or $29 for 5,000. Get a key on the server's page and send it as `Authorization: Bearer <key>`.
+Eight hosted servers run on our side behind [MCPize](https://mcpize.com), which handles keys and billing: a free plan with 100 calls a month, then paid tiers for higher volume. Get a key on the server's page and send it as `Authorization: Bearer <key>`.
 
 ### [SocialBlade Creator Stats](https://mcpize.com/mcp/socialblade-creator-stats)
 
@@ -128,6 +128,38 @@ Reddit posts, nested Reddit comments, date-range search and archive history back
 
 ```
 https://reddit-posts-search-comments.mcpize.run/mcp
+```
+
+### [Jobs Data Intelligence](https://mcpize.com/mcp/jobs-data-intelligence)
+
+Live remote, ATS and startup job listings from 18 boards including Greenhouse, Ashby and Wellfound.
+
+```
+https://jobs-data-intelligence.mcpize.run/mcp
+```
+
+### [Real Estate Listings](https://mcpize.com/mcp/real-estate-listings)
+
+Live sale and rental listings from Zillow, Realtor, Zumper, Craigslist and EU property portals.
+
+```
+https://real-estate-listings.mcpize.run/mcp
+```
+
+### [Reddit Archive: Historical Posts & Comments](https://mcpize.com/mcp/reddit-archive-history)
+
+Historical Reddit posts, threads and comments by UTC date window back to 2008 from public archives.
+
+```
+https://reddit-archive-history.mcpize.run/mcp
+```
+
+### [Reviews & Travel Data](https://mcpize.com/mcp/reviews-and-travel-data)
+
+Google Play, App Store and Tripadvisor reviews, flight fares, airport status, METAR and transit.
+
+```
+https://reviews-and-travel-data.mcpize.run/mcp
 ```
 
 ## Questions
