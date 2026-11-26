@@ -100,11 +100,52 @@ Eight hosted servers run on our side behind [MCPize](https://mcpize.com), which 
 
 ### [SocialBlade Creator Stats](https://mcpize.com/mcp/socialblade-creator-stats)
 
-YouTube, TikTok, Instagram and Twitch growth history and 7/30/90-day gains from SocialBlade.
+SocialBlade Creator Stats gives AI agents 5 read-only influencer vetting tools for YouTube, TikTok, Instagram, Twitch, and Bluesky. Call it keyless with x402 pay-per-call at $0.01 USDC on Base (no account or API key required), or use Free (100 calls/month), Pro ($9/1,000), and Business ($29/5,000) subscriptions. Hard capped at 10 profiles per call.
 
 ```
 https://socialblade-creator-stats.mcpize.run/mcp
 ```
+
+#### Pay-per-call via x402 (HTTP 402 -> Base USDC)
+
+`Authorization` is optional when paying via x402. Discovery (`tools/list`) works keyless and returns HTTP `200`. A keyless `tools/call` returns HTTP `402 Payment Required` with an x402 v1 Base USDC (`eip3009`) payment challenge:
+
+```bash
+# 1. Request a tool call without an Authorization header -> HTTP 402
+curl -i -X POST https://socialblade-creator-stats.mcpize.run/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
+```
+
+The `402` JSON body specifies `"network": "base"`, `"asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"` (Base USDC), `"maxAmountRequired": "10000"` ($0.01 USDC), `"payTo"`, and `"extra": {"assetTransferMethod": "eip3009"}`. Sign an EIP-3009 `TransferWithAuthorization` payload with a Base mainnet wallet holding USDC (or use an x402 MCP client such as `@x402/mcp` or Coinbase Payments MCP) and retry the same request with the `X-PAYMENT` header (still no `Authorization` header):
+
+```bash
+# 2. Retry with the signed Base USDC x402 payment header -> HTTP 200
+curl -X POST https://socialblade-creator-stats.mcpize.run/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -H "X-PAYMENT: <base64-encoded-x402-eip3009-payload>" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_creator_stats","arguments":{"profiles":["@mkbhd"]}}}'
+```
+
+What `get_creator_stats` returns per platform (checked with one real lookup each on 2026-11-01):
+
+| Field | YouTube | TikTok | Instagram | Twitch |
+|---|---|---|---|---|
+| Subscribers or followers, grade, SocialBlade rank | yes | yes | yes | yes |
+| Views, videos or likes | views, videos | likes, videos | posts count | no |
+| Engagement rate, average likes and comments | no | no | yes | no |
+| Daily history (about 15 days) | yes | yes | null | yes |
+| 7-day gain and spike dates | yes | yes | null | yes |
+
+**How can an AI agent pull SocialBlade creator stats without an API key?** Call `https://socialblade-creator-stats.mcpize.run/mcp` keyless and pay $0.01 USDC on Base via HTTP 402 (x402), or send a Bearer key from the Free (100/month), Pro ($9/month), or Business ($29/month) MCPize plans.
+
+**How much does each x402 tool call cost?** Fixed $0.01 USDC on Base across all 5 tools (up to 10 creators or 50 records per call), with no monthly subscription, prepaid credit pack, or account signup.
+
+**How does this compare to the SocialBlade Business API or HypeAuditor?** There are no prepaid credit packs or $150+/yr contracts: pay $0.01 USDC per call via x402 or $9/month flat for 1,000 calls. It returns public SocialBlade metrics, grades, and growth spike dates rather than private audience demographics.
+
+**What if a creator is untracked or Instagram history is requested?** Every requested creator returns a structured status (`ok`, `not_tracked`, `blocked`, or `bad_link`) with a plain `reason`. YouTube, TikTok, and Twitch include about 15 days of daily history; Instagram daily history is unavailable without SocialBlade login and returns `null`, noted upfront.
 
 ### [Ad Library Intelligence](https://mcpize.com/mcp/ad-library-intelligence)
 
